@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food For Life South Africa</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <!-- Logo and Branding -->
+      <div class="logo-section">
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <h1 class="heading">Food For Life South Africa</h1>
+        <p class="slogan">Creating a Hunger-Free South Africa</p>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+          <!-- Branches Dropdown -->
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-building"></i> Branches <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-content">
+
+              <!-- KZN Branches -->
+              <li class="dropdown">
+                <a href="javascript:void(0);" id="kzn-btn" class="dropdown-toggle" data-dropdown="kzn-branches">
+                  <i class="fas fa-map-marker-alt"></i> KZN
+                  <span class="arrow fas fa-arrow-right"></span>
+                </a>
+                <ul class="side-dropdown" id="kzn-branches">
+                  <li><a href="#"><i class="fas fa-city"></i> Durban South</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Durban Central</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Kwa-Mashu</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Kwa Dukuza</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Merebank</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Pietermarizburg</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Phoenix</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Port Shepstone</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> South Coast</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Tongat</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Umgeni Region</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Western Region</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Estcourt</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Howick</a></li>
+                  <li><a href="#"><i class="fas fa-child"></i> Children Projects</a></li>
+                </ul>
+              </li>
+
+              <!-- Gauteng Branches -->
+              <li class="dropdown">
+                <a href="javascript:void(0);" id="gauteng-btn" class="dropdown-toggle" data-dropdown="gauteng-branches">
+                  <i class="fas fa-map-marker-alt"></i> Gauteng
+                  <span class="arrow fas fa-arrow-right"></span>
+                </a>
+                <ul class="side-dropdown" id="gauteng-branches">
+                  <li><a href="#"><i class="fas fa-city"></i> Midrand</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Pretoria</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Sandton</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Soweto</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> South Central Gauteng</a></li>
+                </ul>
+              </li>
+
+              <!-- MP Branches -->
+              <li class="dropdown">
+                <a href="javascript:void(0);" class="dropdown-toggle" data-dropdown="mobile-mp-branches"
+                  onclick="toggleDropdown('mobile-mp-branches')">
+                  <i class="fas fa-map-marker-alt"></i> Mpumalanga
+                  <span class="arrow fas fa-arrow-right"></span>
+                </a>
+                <ul class="side-dropdown" id="mobile-mp-branches">
+                  <li><a href="#"><i class="fas fa-city"></i> Branch 1</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Branch 2</a></li>
+                </ul>
+              </li>
+
+              <!-- Cape Branches -->
+              <li class="dropdown">
+                <a href="javascript:void(0);" id="cape-btn" class="dropdown-toggle" data-dropdown="cape-branches">
+                  <i class="fas fa-map-marker-alt"></i> Cape
+                  <span class="arrow fas fa-arrow-right"></span>
+                </a>
+                <ul class="side-dropdown" id="cape-branches">
+                  <li><a href="#"><i class="fas fa-city"></i> Cape Town</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> East London</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Stellenbosch</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Port Elizabeth</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- Additional Navigation Items with Icons -->
+          <li><a href="donation.html" class="nav-link active"><i class="fas fa-hand-holding-heart"></i> Donate</a></li>
+          <li><a href="our-work.html"><i class="fas fa-briefcase"></i> Our Work</a></li>
+          <li><a href="volunteer.html"><i class="fas fa-hands-helping"></i> Volunteering</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+
+  </header>
+
+  <!-- Side Menu Button (Visible on Mobile Only) -->
+  <button class="menu-btn" onclick="toggleSideMenu()">☰</button>
+  </div>
+
+
+  <!-- Side Menu (Only for Small Screens) -->
+  <aside id="side-menu" class="side-menu">
+    <button class="close-btn" onclick="toggleSideMenu()">×</button>
+    <ul>
+      <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+      <!-- Branches Dropdown for Mobile -->
+      <li class="dropdown">
+        <a href="javascript:void(0);" data-dropdown="branches-dropdown" onclick="toggleDropdown('branches-dropdown')">
+          <i class="fas fa-building"></i> Branches <i class="fas fa-chevron-down"></i>
+        </a>
+        <ul class="dropdown-content" id="branches-dropdown">
+
+          <!-- KZN Branches -->
+          <li class="dropdown">
+            <a href="javascript:void(0);" class="dropdown-toggle" data-dropdown="mobile-kzn-branches"
+              onclick="toggleDropdown('mobile-kzn-branches')">
+              <i class="fas fa-map-marker-alt"></i> KZN
+              <span class="arrow fas fa-arrow-right"></span>
+            </a>
+            <ul class="side-dropdown" id="mobile-kzn-branches">
+              <li><a href="#"><i class="fas fa-city"></i> Durban South</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Durban Central</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Kwa-Mashu</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Kwa Dukuza</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Merebank</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Pietermaritzburg</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Phoenix</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Port Shepstone</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> South Coast</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Tongaat</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Umgeni Region</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Western Region</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Estcourt</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Howick</a></li>
+              <li><a href="#"><i class="fas fa-child"></i> Children Projects</a></li>
+            </ul>
+          </li>
+          <!-- Gauteng Branches -->
+          <li class="dropdown">
+            <a href="javascript:void(0);" class="dropdown-toggle" data-dropdown="mobile-gauteng-branches"
+              onclick="toggleDropdown('mobile-gauteng-branches')">
+              <i class="fas fa-map-marker-alt"></i> Gauteng
+              <span class="arrow fas fa-arrow-right"></span>
+            </a>
+            <ul class="side-dropdown" id="mobile-gauteng-branches">
+              <li><a href="#"><i class="fas fa-city"></i> Midrand</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Pretoria</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Sandton</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Soweto</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> South Central Gauteng</a></li>
+            </ul>
+          </li>
+          <!-- Mpumalanga Branches -->
+          <li class="dropdown">
+            <a href="javascript:void(0);" class="dropdown-toggle" data-dropdown="mobile-mp-branches"
+              onclick="toggleDropdown('mobile-mp-branches')">
+              <i class="fas fa-map-marker-alt"></i> Mpumalanga
+              <span class="arrow fas fa-arrow-right"></span>
+            </a>
+            <ul class="side-dropdown" id="mobile-mp-branches">
+              <li><a href="#"><i class="fas fa-city"></i> Branch 1</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Branch 2</a></li>
+            </ul>
+          </li>
+          <!-- Cape Branches -->
+          <li class="dropdown">
+            <a href="javascript:void(0);" class="dropdown-toggle" data-dropdown="mobile-cape-branches"
+              onclick="toggleDropdown('mobile-cape-branches')">
+              <i class="fas fa-map-marker-alt"></i> Cape
+              <span class="arrow fas fa-arrow-right"></span>
+            </a>
+            <ul class="side-dropdown" id="mobile-cape-branches">
+              <li><a href="#"><i class="fas fa-city"></i> Cape Town</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> East London</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Stellenbosch</a></li>
+              <li><a href="#"><i class="fas fa-city"></i> Port Elizabeth</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="donation.html" class="nav-links"><i class="fas fa-hand-holding-heart"></i> Donate</a></li>
+      <li><a href="our-work.html"><i class="fas fa-briefcase"></i> Our Work</a></li>
+      <li><a href="volunteer.html"><i class="fas fa-hands-helping"></i> Volunteering</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </aside>
+</body>
+
+</html>

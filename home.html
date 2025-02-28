@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food For Life South Africa</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="js/script.js" defer></script>
+  
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <!-- Logo and Branding -->
+      <div class="logo-section">
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <h1 class="heading">Food For Life South Africa</h1>
+        <p class="slogan">Creating a Hunger-Free South Africa</p>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="home.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+          <!-- Branches Dropdown -->
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-building"></i> Branches <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-content">
+              <!-- KZN Branches -->
+              <li class="dropdown">
+                <a href="javascript:void(0);" id="kzn-btn" class="dropdown-toggle" data-dropdown="kzn-branches">
+                  <i class="fas fa-map-marker-alt"></i> KZN
+                  <span class="arrow fas fa-arrow-right"></span>
+                </a>
+                <ul class="side-dropdown" id="kzn-branches">
+                  <li><a href="#"><i class="fas fa-city"></i> Durban South</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Durban Central</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Kwa-Mashu</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Kwa Dukuza</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Merebank</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Pietermaritzburg</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Phoenix</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Port Shepstone</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> South Coast</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Tongaat</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Umgeni Region</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Western Region</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Estcourt</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Howick</a></li>
+                  <li><a href="#"><i class="fas fa-child"></i> Children Projects</a></li>
+                </ul>
+              </li>
+
+              <!-- Gauteng Branches -->
+              <li class="dropdown">
+                <a href="javascript:void(0);" id="gauteng-btn" class="dropdown-toggle" data-dropdown="gauteng-branches">
+                  <i class="fas fa-map-marker-alt"></i> Gauteng
+                  <span class="arrow fas fa-arrow-right"></span>
+                </a>
+                <ul class="side-dropdown" id="gauteng-branches">
+                  <li><a href="#"><i class="fas fa-city"></i> Midrand</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Pretoria</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Sandton</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Soweto</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> South Central Gauteng</a></li>
+                </ul>
+              </li>
+
+              <!-- MP Branches -->
+              <li class="dropdown">
+                <a href="javascript:void(0);" class="dropdown-toggle" data-dropdown="mobile-mp-branches" onclick="toggleDropdown('mobile-mp-branches')">
+                  <i class="fas fa-map-marker-alt"></i> Mpumalanga
+                  <span class="arrow fas fa-arrow-right"></span>
+                </a>
+                <ul class="side-dropdown" id="mobile-mp-branches">
+                  <li><a href="#"><i class="fas fa-city"></i> Branch 1</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Branch 2</a></li>
+                </ul>
+              </li>
+
+              <!-- Cape Branches -->
+              <li class="dropdown">
+                <a href="javascript:void(0);" id="cape-btn" class="dropdown-toggle" data-dropdown="cape-branches">
+                  <i class="fas fa-map-marker-alt"></i> Cape
+                  <span class="arrow fas fa-arrow-right"></span>
+                </a>
+                <ul class="side-dropdown" id="cape-branches">
+                  <li><a href="#"><i class="fas fa-city"></i> Cape Town</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> East London</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Stellenbosch</a></li>
+                  <li><a href="#"><i class="fas fa-city"></i> Port Elizabeth</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- Additional Navigation Items with Icons -->
+          <li><a href="donation.html"><i class="fas fa-hand-holding-heart"></i> Donate</a></li>
+          <li><a href="our-work.html"><i class="fas fa-briefcase"></i> Our Work</a></li>
+          <li><a href="volunteer.html"><i class="fas fa-hands-helping"></i> Volunteering</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Side Menu Button (Visible on Mobile Only) -->
+      <button class="menu-btn" onclick="toggleSideMenu()">☰</button>
+    </div>
+
+    <!-- Side Menu (Only for Small Screens) -->
+    <aside id="side-menu" class="side-menu">
+      <button class="close-btn" onclick="toggleSideMenu()">×</button>
+      <ul>
+        <li><a href="home.html" class="nav-links"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+        <!-- Branches Dropdown for Mobile -->
+        <li class="dropdown">
+          <a href="javascript:void(0);" data-dropdown="branches-dropdown" onclick="toggleDropdown('branches-dropdown')">
+            <i class="fas fa-building"></i> Branches <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul class="dropdown-content" id="branches-dropdown">
+            <!-- KZN Branches -->
+            <li class="dropdown">
+              <a href="javascript:void(0);" class="dropdown-toggle" data-dropdown="mobile-kzn-branches" onclick="toggleDropdown('mobile-kzn-branches')">
+                <i class="fas fa-map-marker-alt"></i> KZN
+                <span class="arrow fas fa-arrow-right"></span>
+              </a>
+              <ul class="side-dropdown" id="mobile-kzn-branches">
+                <li><a href="#"><i class="fas fa-city"></i> Durban South</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Durban Central</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Kwa-Mashu</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Kwa Dukuza</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Merebank</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Pietermaritzburg</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Phoenix</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Port Shepstone</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> South Coast</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Tongaat</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Umgeni Region</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Western Region</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Estcourt</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Howick</a></li>
+                <li><a href="#"><i class="fas fa-child"></i> Children Projects</a></li>
+              </ul>
+            </li>
+            <!-- Gauteng Branches -->
+            <li class="dropdown">
+              <a href="javascript:void(0);" class="dropdown-toggle" data-dropdown="mobile-gauteng-branches" onclick="toggleDropdown('mobile-gauteng-branches')">
+                <i class="fas fa-map-marker-alt"></i> Gauteng
+                <span class="arrow fas fa-arrow-right"></span>
+              </a>
+              <ul class="side-dropdown" id="mobile-gauteng-branches">
+                <li><a href="#"><i class="fas fa-city"></i> Midrand</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Pretoria</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Sandton</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Soweto</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> South Central Gauteng</a></li>
+              </ul>
+            </li>
+            <!-- Mpumalanga Branches -->
+            <li class="dropdown">
+              <a href="javascript:void(0);" class="dropdown-toggle" data-dropdown="mobile-mp-branches" onclick="toggleDropdown('mobile-mp-branches')">
+                <i class="fas fa-map-marker-alt"></i> Mpumalanga
+                <span class="arrow fas fa-arrow-right"></span>
+              </a>
+              <ul class="side-dropdown" id="mobile-mp-branches">
+                <li><a href="#"><i class="fas fa-city"></i> Branch 1</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Branch 2</a></li>
+              </ul>
+            </li>
+            <!-- Cape Branches -->
+            <li class="dropdown">
+              <a href="javascript:void(0);" class="dropdown-toggle" data-dropdown="mobile-cape-branches" onclick="toggleDropdown('mobile-cape-branches')">
+                <i class="fas fa-map-marker-alt"></i> Cape
+                <span class="arrow fas fa-arrow-right"></span>
+              </a>
+              <ul class="side-dropdown" id="mobile-cape-branches">
+                <li><a href="#"><i class="fas fa-city"></i> Cape Town</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> East London</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Stellenbosch</a></li>
+                <li><a href="#"><i class="fas fa-city"></i> Port Elizabeth</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="donation.html"><i class="fas fa-hand-holding-heart"></i> Donate</a></li>
+        <li><a href="our-work.html"><i class="fas fa-briefcase"></i> Our Work</a></li>
+        <li><a href="volunteer.html"><i class="fas fa-hands-helping"></i> Volunteering</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </aside>
+  </header>
+
+  <div class="ffl">
+    <main>
+      <!-- Image Slider -->
+      <div class="fl">
+        <div class="slider-wrapper" id="sliderWrapper">
+          <div class="slider-item"><img src="img/img1.jpeg" alt="Image 1"></div>
+          <div class="slider-text">
+            <h2>hhh</h2>
+            <p>Descriptive text about Image 1.</p>
+            </div>
+          <div class="slider-item"><img src="img/img2.jpeg" alt="Image 2"></div>
+          <div class="slider-item"><img src="img/img3.jpeg" alt="Image 3"></div>
+          <div class="slider-item"><img src="img/img4.jpeg" alt="Image 4"></div>
+          <div class="slider-item"><img src="img/img5.jpeg" alt="Image 5"></div>
+          <div class="slider-item"><img src="img/img6.jpeg" alt="Image 6"></div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-button" onclick="slide(-1)">❮</button>
+          <button class="slider-button" onclick="slide(1)">❯</button>
+        </div>
+        <div class="pagination" id="pagination"></div>
+      </div>
+
+      <!-- Hero Section -->
+      <section id="hero">
+        <h2>25,000 Meals, 25,000 Smiles</h2>
+        <p>Celebrating a Milestone of Compassion! Join us in spreading love and nourishment.</p>
+        <a href="#donate" class="cta-button">Donate Now</a>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>Food For Life South Africa is dedicated to providing nutritious meals to communities in need. With compassion and commitment, we work tirelessly to ensure no one goes to bed hungry.</p>
+        <p>Our mission is to serve those in need with love, respect, and dignity, helping build a healthier and happier society.</p>
+      </section>
+
+      <!-- Impact Section -->
+      <section id="impact" class="impact-section">
+        <h2>Our Impact</h2>
+        <div class="impact-stats">
+          <div class="stat">
+            <h3>2,000,000+</h3>
+            <p>Meals Served to Date</p>
+          </div>
+          <div class="stat">
+            <h3>150+</h3>
+            <p>Communities Supported</p>
+          </div>
+          <div class="stat">
+            <h3>500+</h3>
+            <p>Volunteers Engaged</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- News Section -->
+      <section id="news" class="news-section">
+        <h2>Latest News</h2>
+        <div class="news-grid">
+          <article>
+            <h3>Massive Donation of R30,000 Rand!</h3>
+            <p>Teaming up with UPL – a global agricultural company specializing in the marketing anddistribution of innovative crop protection and life science brands🤝🌾👨🏻‍🔬 The team was...</p>
+            <a href="#"class="news-button">Read More</a>
+          </article>
+          <article>
+            <h3>Tongaat’s Devastating Tornado</h3>
+            <p>BIn the wake of the devastating tornado that tore through the Tongaat and KZN communities,leaving destruction in its path, hope and help are on the...</p>
+            <a href="#"class="news-button">Read More</a>
+          </article>
+          <article>
+            <h3>Hot Meals for Tongaat and Surrounding Areas!</h3>
+            <p>SOur Tongaat team was hard at work, bringing in the bliss in the biting cold yesterday, with adelicious veggie meal and fruit distribution!🧡🥰 We’re super...</p>
+            <a href="#" class="news-button">Read More</a>
+          </article>
+          <article>
+            <h3>Breaking Bread, Spreading Love</h3>
+            <p>Snippets from today’s feed!🚀🥳We’re super excited to announce that today, the Food For Life South Africa East Londonteam distributed hearty sandwiches at Parkridge venues where...</p>
+            <a href="#" class="news-button">Read More</a>
+          </article>
+          
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials-section">
+        <h2>What Our Beneficiaries Say</h2>
+        <div class="testimonials">
+          <blockquote>
+            <p>“Food For Life has been a blessing to our community. The meals are not only nourishing but also served with love.”</p>
+            <cite>- Community Leader, KZN</cite>
+          </blockquote>
+          <blockquote>
+            <p>“Seeing the smiles on children’s faces when they receive their meals is priceless. Thank you for your support!”</p>
+            <cite>- Volunteer, East London</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Social Media Section -->
+      <section id="social-media" class="social-media-section" aria-label="Social Media Section">
+        <h2>Our Social Media</h2>
+        <div class="social-media-grid">
+          <!-- Facebook Section -->
+          <div class="social-media-item fb-page">
+            <div id="fb-root"></div>
+            <div class="fb-page" data-href="https://www.facebook.com/FoodForLifeSouthAfrica?ref=embed_page" data-width="500" data-height="700" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/FoodForLifeSouthAfrica" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/FoodForLifeSouthAfrica?ref=embed_page">Follow Us on Facebook</a>
+              </blockquote>
+            </div>
+          </div>
+
+          <!-- Instagram Section -->
+          <div class="social-media-item insta-embed">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/YourInstagramPost/" data-instgrm-version="13">
+              <a href="https://www.instagram.com/p/YourInstagramPost/">Follow Us on Instagram</a>
+            </blockquote>
+          </div>
+
+          <!-- YouTube Section -->
+          <div class="social-media-item youtube-embed">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/non3YICf64c?si=Kkm17T1YnU4JEjSg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- Facebook SDK Script -->
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0" nonce="n6gFY0Zy"></script>
+
+        <!-- Instagram Embed Script -->
+        <script async src="//www.instagram.com/embed.js"></script>
+      </section>
+
+      <!-- Donation Section -->
+      <section id="donate" class="donation-section">
+        <h2>Support Our Community</h2>
+        <input type="number" placeholder="Enter an Amount" />
+        <button>Donate Now</button>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>For more information or to get involved, reach out to us:</p>
+        <address>
+          Email: info@foodforlife.org.za<br>
+          Phone: +27 12 345 6789<br>
+          Address: 123 Compassion Street, Midrand, South Africa
+        </address>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
