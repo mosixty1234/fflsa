@@ -750,6 +750,7 @@ a:focus,
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
+
     /* Testimonials Section */
     .testimonials-section h2 {
         font-size: 2em;
@@ -764,89 +765,108 @@ a:focus,
 }
 
 
-/* Social Media Section */
+/* General Section Styling */
 #social-media {
     text-align: center;
-    padding: 80px 20px;
-    background-color: #f4f6f7;
-    margin-top: 40px;
+    padding: 60px 20px;
+    background-color: #ffffff;
 }
 
 #social-media h2 {
     color: #2c3e50;
-    font-size: 2.8em;
-    margin-bottom: 40px; /* Increased margin for better spacing */
-    font-family: 'Arial', sans-serif;
+    font-size: 2.4em;
+    margin-bottom: 30px;
     font-weight: 700;
-    letter-spacing: -1px;
 }
 
-/* Grid Layout */
+/* Social Media Grid - Responsive */
 .social-media-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    gap: 30px; /* Spacing between grid items */
-    max-width: 1200px; /* Limit the maximum width of the grid */
-    margin: 0 auto; /* Center the grid */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* Social Media Item Styling */
 .social-media-item {
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Like Our Pages Section */
+.like-pages {
+    margin-top: 40px;
+    background: #f9f9f9;
     padding: 20px;
-    text-align: center;
-}
-
-/* Facebook Embed Styling */
-.fb-page {
-    width: 100%;
-    height: 400px; /* Adjusted height for better proportions */
     border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Instagram Embed Styling */
-.insta-embed {
+/* Social Icons Container */
+.like-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    /* Allows icons to wrap on small screens */
+}
+
+/* Social Icons */
+.social-link {
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 8px;
+    background: #eee;
+    transition: transform 0.3s, background 0.3s;
 }
 
-.instagram-media {
-    width: 100%;
-    max-width: 400px; /* Limit the width of the Instagram embed */
-    border-radius: 10px;
-    overflow: hidden;
+/* Social Icons Hover */
+.social-link i {
+    font-size: 20px;
+    color: #333;
 }
 
-/* YouTube Embed Styling */
-.youtube-embed iframe {
-    width: 100%;
-    height: 315px; /* Standard YouTube embed height */
-    border-radius: 10px;
+.social-link:hover {
+    transform: scale(1.1);
+    background: #ddd;
 }
 
-/* Mobile Responsive */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+
+    /* Stack Social Media Items */
     .social-media-grid {
-        grid-template-columns: 1fr; /* Stack items vertically on mobile */
-        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-media-item {
+        width: 90%;
+        /* Adjust width to fit better on smaller screens */
+    }
+
+    /* Wrap Icons in Two Rows */
+    .like-icons {
+        max-width: 250px;
+        justify-content: center;
+    }
+
+    /* Adjust Section Spacing */
+    #social-media {
+        padding: 40px 15px;
     }
 
     #social-media h2 {
-        font-size: 2.2em;
-    }
-
-    .fb-page {
-        height: 300px; /* Adjusted height for mobile */
-    }
-
-    .youtube-embed iframe {
-        height: 250px; /* Adjusted height for mobile */
+        font-size: 2em;
     }
 }
+
 
 
 /* News Section */
@@ -959,11 +979,15 @@ a:focus,
 
 /* Base styles for the donation section */
 .ffl #donate {
-    padding: 80px 20px; /* Increased padding for better spacing */
+    padding: 80px 20px;
+    /* Increased padding for better spacing */
     text-align: center;
-    background-color: #e2ebef; /* Light gray background to separate it */
-    border-top: 1px solid #e0e0e0; /* Subtle top border */
-    border-bottom: 1px solid #e0e0e0; /* Subtle bottom border */
+    background-color: #e2ebef;
+    /* Light gray background to separate it */
+    border-top: 1px solid #e0e0e0;
+    /* Subtle top border */
+    border-bottom: 1px solid #e0e0e0;
+    /* Subtle bottom border */
 }
 
 /* Heading styles */
@@ -1020,7 +1044,8 @@ a:focus,
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
     .ffl #donate {
-        padding: 60px 15px; /* Adjusted padding for smaller screens */
+        padding: 60px 15px;
+        /* Adjusted padding for smaller screens */
     }
 
     .ffl #donate h2 {
@@ -1254,7 +1279,8 @@ a:focus,
     left: 0;
     width: 100%;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.5);
+    /* Dark overlay */
     color: #fff;
     text-align: left;
     opacity: 0;
@@ -1275,3 +1301,367 @@ a:focus,
 .slider-item:hover .slider-text {
     opacity: 1;
 }
+
+
+/* Full-Width Footer (Glassmorphism Effect) */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    /* Increased opacity for better visibility */
+    border-radius: 20px;
+    /* Remove border-radius for full-width */
+    padding: 25px;
+    width: 100%;
+    /* Full width */
+    margin: 0;
+    /* Remove margin for full-width */
+    backdrop-filter: blur(12px);
+    /* Slightly stronger blur effect */
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    /* Increased border opacity */
+}
+
+/* Default Font Size (Desktop) */
+footer p,
+.footer-links a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2c3e50;
+    /* Apply the color scheme */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Responsive Font for Mobile */
+@media screen and (max-width: 768px) {
+
+    footer p,
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    .footer-container {
+        padding: 18px;
+    }
+}
+
+/* Footer Links */
+.footer-links {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #2c3e50;
+    /* Apply the color scheme */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px;
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effects - Soft Neon Glow */
+.footer-links a:hover {
+    color: #ec4b0b;
+    text-shadow: 0px 0px 10px rgba(0, 170, 255, 0.9);
+    transform: scale(1.1);
+}
+
+/* Stylish Scroll-Up Button */
+#scrollUpBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    background: rgba(0, 170, 255, 0.8);
+    backdrop-filter: blur(15px);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s ease;
+    box-shadow: 0px 6px 15px rgba(0, 170, 255, 0.5);
+    animation: fadeIn 0.5s ease-in-out, bounce 1.5s infinite;
+    z-index: 20;
+    /* Ensures the scroll-up button is always on top */
+}
+
+#scrollUpBtn:hover {
+    background: rgb(255, 140, 0);
+    transform: scale(1.15);
+}
+
+/* Scroll-Up Button Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* General Section Styles */
+#about-us {
+    padding: 15px 20px; /* Reduced padding for a shorter section */
+    background-color: #f4f7f6; /* Light background for modern feel */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    text-align: center;
+    margin-left: -25px; /* Push the entire section content slightly to the left */
+}
+
+/* Section Heading Styles */
+.section-heading {
+    font-size: 28px;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 15px; /* Reduced margin */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-left: 300px; /* Added left padding to push it slightly left */
+    text-align: left; /* Align text to the left */
+}
+
+/* Purpose Heading Styles */
+.purpose-heading {
+    padding: 0; /* Remove any inner padding */
+    box-shadow: none; /* Remove any shadow */
+    background: none; /* Remove any background */
+    border: none; /* Remove border */
+    width: auto; /* Allow natural width */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font family */
+    font-weight: 600; /* Bold weight for better emphasis */
+    font-size: 2rem; /* Larger font size for a stronger heading */
+    color: #333; /* Dark color for readability */
+    letter-spacing: 1px; /* Slight letter spacing for a modern feel */
+    text-align: center; /* Center-align the heading */
+    margin: 0; /* Remove default margins */
+}
+
+
+
+/* Content Container */
+.about-us-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 10px; /* Reduced margin-top */
+}
+
+/* Section 1 Background Color */
+#about-us-1 {
+    background-color: #f9f9f9; /* Green background for "About Us" section */
+}
+
+/* Section 2 Background Color */
+#about-us-2 {
+    background-color: #d8edf0; /* Orange background for "Every Cent Makes A Plate" */
+}
+
+/* Section 3 Background Color */
+#about-us-3 {
+    background-color: #f9f9f9; /* Blue background for "If it doesn't say Food for Life South Africa" */
+}
+
+/* Section 4 Background Color */
+#about-us-4 {
+    background-color: #d8edf0; /* Purple background for "Our Core Values" */
+}
+
+/* Image Styling */
+.about-us-image {
+    width: 100%;
+    max-width: 340px; /* Reduced width for a more compact image */
+    height: auto;
+    border-radius: 10px; /* Border radius for the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border: 10px solid #d8edf0; /* Light grey border for the frame */
+}
+
+.about-us-image:hover {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* Text Styling */
+.about-us-text {
+    max-width: 600px; /* Reduced max width */
+    font-size: 1.1em; /* Reduced font size for text */
+    line-height: 1.6; /* Reduced line height */
+    color: #666;
+    text-align: left;
+    margin-top: 15px; /* Reduced margin */
+    font-weight: 300;
+}
+
+.about-us-text p {
+    margin-bottom: 12px; /* Reduced bottom margin */
+    padding-right: 15px; /* Adds space on the right for readability */
+}
+
+/* Default styles for <br> tag */
+br {
+    display: inline-block; /* Make it affect the layout */
+}
+
+/* Responsive Styling for Mobile */
+@media screen and (max-width: 768px) {
+    #about-us-1 {
+        padding: 15px; /* Reduced padding for smaller screens */
+        margin-left: 0; /* Reset margin for mobile */
+    }
+
+    .section-heading {
+        font-size: 24px; /* Slightly smaller font size for mobile */
+        margin-bottom: 15px;
+        text-align: center; /* Center align for mobile */
+        padding-left: 0; /* Remove left padding for mobile */
+    }
+
+    .purpose-heading {
+        font-size: 28px; /* Smaller font size for mobile */
+        margin-bottom: 15px;
+    }
+
+    .about-us-content {
+        flex-direction: column;
+        gap: 15px; /* Reduced gap for tighter spacing */
+        align-items: center;
+    }
+
+    .about-us-image {
+        max-width: 100%;
+        box-shadow: none;
+        margin-bottom: 15px; /* Added margin for better separation */
+    }
+
+    .about-us-text {
+        font-size: 1em; /* Smaller font size for better readability */
+        padding: 0 10px; /* Reduced padding for tighter spacing */
+        text-align: center; /* Center text for better mobile readability */
+    }
+
+    .about-us-text p {
+        padding-right: 0; /* Remove padding for centered text */
+    }
+}
+
+/* Additional Media Query for Very Small Screens */
+@media screen and (max-width: 480px) {
+    .section-heading {
+        font-size: 22px; /* Even smaller font size for very small screens */
+    }
+
+    .purpose-heading {
+        font-size: 24px; /* Smaller font size for very small screens */
+    }
+
+    .about-us-text {
+        font-size: 0.95em; /* Slightly smaller font size for very small screens */
+    }
+}
+
+.purpose-head {
+    padding: 0; /* Remove any inner padding */
+    box-shadow: none; /* Remove any shadow */
+    background: none; /* Remove any background */
+    border: none; /* Remove border */
+    width: auto; /* Allow natural width */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font family */
+    font-weight: 600; /* Bold weight for better emphasis */
+    font-size: 1.5rem; /* Smaller font size for a more balanced heading */
+    color: #333; /* Dark color for readability */
+    letter-spacing: 1px; /* Slight letter spacing for a modern feel */
+    text-align: center; /* Center-align the heading */
+    margin: 0; /* Remove default margins */
+}
+
+/* Contact Section Styles */
+#contact {
+    text-align: center; /* Center-align the content */
+    margin: 20px auto; /* Center the section with auto margins */
+    background-color: #ffffff;
+}
+
+#contact h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    font-weight: 600; /* Bold for emphasis */
+    font-size: 2rem; /* Slightly larger font size */
+    color: #333; /* Dark color for readability */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+#contact p {
+    font-size: 1.1rem; /* Slightly larger text for the paragraph */
+    color: #555; /* Dark grey color for the paragraph */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+#contact address {
+    font-style: normal; /* Remove italics for address */
+    font-size: 1rem; /* Standard font size for address text */
+    color: #333; /* Dark color for readability */
+    line-height: 1.5; /* Increase line height for readability */
+}
+
+#contact address span {
+    display: block; /* Display each contact info on a new line */
+    margin-bottom: 8px; /* Space between each line of contact info */
+}
+
+#contact address a {
+    color: #007BFF; /* Blue color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+#contact address a:hover {
+    text-decoration: underline; /* Underline links on hover for emphasis */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    #contact {
+        padding: 20px 10px; /* Less padding on mobile */
+    }
+
+    #contact h2 {
+        font-size: 1.5rem; /* Smaller font size for headings */
+    }
+
+    #contact p {
+        font-size: 1rem; /* Adjust paragraph text for smaller screens */
+    }
+
+    #contact address {
+        font-size: 0.9rem; /* Slightly smaller address font */
+    }
+
+    #contact address span {
+        margin-bottom: 10px; /* Increase spacing between contact info */
+    }
+}
+
