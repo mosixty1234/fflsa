@@ -1665,3 +1665,129 @@ br {
     }
 }
 
+.donate-section {
+    background: #f9f9f9; /* Light gray background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Container */
+.donate-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.donate-header h1 {
+    color: #003366; /* Navy Blue */
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.donate-header p {
+    color: #444;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Donate Options */
+.donate-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Individual Option */
+.donate-option {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 6px solid #003366; /* Navy Blue left border */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.donate-option h2 {
+    font-size: 20px;
+    color: #003366; /* Navy Blue */
+    margin-bottom: 10px;
+}
+
+.donate-option p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.donate-option a {
+    color: #ff6f00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.donate-option a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.donate-button, .subscribe-button {
+    background: #ff6f00; /* Orange */
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+.donate-button:hover, .subscribe-button:hover {
+    background: #0055aa; /* Blue hover */
+    transform: scale(1.05);
+}
+
+/* Monthly Donations */
+.monthly-donations {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* Mobile-Only Media Queries */
+@media screen and (max-width: 768px) {
+    .donate-section {
+        padding: 15px;
+    }
+
+    .donate-header h1 {
+        font-size: 24px;
+    }
+
+    .donate-header p {
+        font-size: 14px;
+    }
+
+    .donate-option {
+        padding: 14px;
+    }
+
+    .donate-option h2 {
+        font-size: 18px;
+    }
+
+    .donate-option p {
+        font-size: 14px;
+    }
+
+    .donate-button, .subscribe-button {
+        padding: 12px;
+        font-size: 15px;
+    }
+}

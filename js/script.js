@@ -346,3 +346,27 @@ scrollUpBtn.onclick = function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
+function redirectToPayFast() {
+    const donationAmount = prompt("Please enter the donation amount (ZAR):");
+
+    if (donationAmount && !isNaN(donationAmount) && donationAmount > 0) {
+      const form = document.createElement("form");
+      form.method = "POST";
+      form.action = "https://www.payfast.co.za/eng/process";
+
+      // PayFast Integration Fields
+      form.innerHTML = `
+        <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
+        <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
+        <input type="hidden" name="amount" value="${donationAmount}">
+        <input type="hidden" name="return_url" value="YOUR_RETURN_URL">
+        <input type="hidden" name="cancel_url" value="YOUR_CANCEL_URL">
+        <input type="hidden" name="notify_url" value="YOUR_NOTIFY_URL">
+      `;
+
+      document.body.appendChild(form);
+      form.submit();  // Submit the form to PayFast
+    } else {
+      alert("Please enter a valid donation amount.");
+    }
+  }
