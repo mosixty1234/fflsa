@@ -347,60 +347,81 @@ scrollUpBtn.onclick = function () {
 };
 
 
- // One-time donation function
- function redirectToPayFast() {
-    const donationAmount = document.getElementById("donationAmount").value.trim();
 
-    if (!donationAmount || isNaN(donationAmount) || donationAmount < 50) {
-        alert("Please enter a valid donation amount (minimum R50).");
+
+
+// One-time Donation Function
+function redirectToPayFast() {
+    const donationAmount = Number(document.getElementById("donationAmount").value.trim());
+    if (isNaN(donationAmount) || donationAmount < 50 || donationAmount > 1000000) {
+        alert("Please enter a valid donation amount between R50 and R1,000,000.");
         return;
     }
 
-    const form = document.createElement("form");
-    form.method = "POST";
-    form.action = "https://www.payfast.co.za/eng/process"; // Use Sandbox for testing: "https://sandbox.payfast.co.za/eng/process"
+    let existingForm = document.getElementById("payfastForm");
+    if (existingForm) existingForm.remove();
 
-    // PayFast Required Fields
+    const form = document.createElement("form");
+    form.id = "payfastForm";
+    form.method = "POST";
+    form.action = "https://sandbox.payfast.co.za/eng/process";
+
     form.innerHTML = `
         <input type="hidden" name="merchant_id" value="10037375">
         <input type="hidden" name="merchant_key" value="vvl2itlcfwjfi">
-        <input type="hidden" name="amount" value="${donationAmount}">
+        <input type="hidden" name="amount" value="${donationAmount * 100}">
         <input type="hidden" name="item_name" value="Food For Life Donation">
         <input type="hidden" name="return_url" value="https://yourwebsite.com/payment-success">
         <input type="hidden" name="cancel_url" value="https://yourwebsite.com/payment-cancelled">
         <input type="hidden" name="notify_url" value="https://yourwebsite.com/payment-notify">
     `;
 
-    document.body.appendChild(form);
-    form.submit(); // Submit to PayFast
+    try {
+        document.body.appendChild(form);
+        document.body.style.cursor = "wait";
+        form.submit();
+    } catch (error) {
+        alert("An error occurred. Please try again.");
+        console.error(error);
+    }
 }
 
-// Subscription function
+// Subscription Function
 function subscribeToPayFast(amount) {
-    if (!amount || isNaN(amount) || amount <= 0) {
-        alert("Invalid donation amount. Please try again.");
+    const parsedAmount = Number(amount);
+    if (isNaN(parsedAmount) || parsedAmount < 50 || parsedAmount > 1000000) {
+        alert("Please select a valid donation amount between R50 and R1,000,000.");
         return;
     }
 
-    const form = document.createElement("form");
-    form.method = "POST";
-    form.action = "https://www.payfast.co.za/eng/process"; // Use Sandbox for testing: "https://sandbox.payfast.co.za/eng/process"
+    let existingForm = document.getElementById("payfastSubscriptionForm");
+    if (existingForm) existingForm.remove();
 
-    // PayFast Subscription Fields
+    const form = document.createElement("form");
+    form.id = "payfastSubscriptionForm";
+    form.method = "POST";
+    form.action = "https://sandbox.payfast.co.za/eng/process";
+
     form.innerHTML = `
         <input type="hidden" name="merchant_id" value="10037375">
         <input type="hidden" name="merchant_key" value="vvl2itlcfwjfi">
-        <input type="hidden" name="amount" value="${amount}">
+        <input type="hidden" name="amount" value="${parsedAmount * 100}">
+        <input type="hidden" name="recurring_amount" value="${parsedAmount * 100}">
         <input type="hidden" name="item_name" value="Monthly Donation Subscription">
-        <input type="hidden" name="subscription_type" value="1"> <!-- 1 = Recurring -->
-        <input type="hidden" name="billing_frequency" value="1"> <!-- Monthly -->
-        <input type="hidden" name="cycles" value="0"> <!-- 0 = Infinite -->
-        <input type="hidden" name="return_url" value="https://yourwebsite.com/payment-success">
-        <input type="hidden" name="cancel_url" value="https://yourwebsite.com/payment-cancelled">
-        <input type="hidden" name="notify_url" value="https://yourwebsite.com/payment-notify">
+        <input type="hidden" name="subscription_type" value="1">
+        <input type="hidden" name="frequency" value="3">
+        <input type="hidden" name="cycles" value="0">
+        <input type="hidden" name="return_url" value="https://yourwebsite.com/subscription-success">
+        <input type="hidden" name="cancel_url" value="https://yourwebsite.com/subscription-cancelled">
+        <input type="hidden" name="notify_url" value="https://yourwebsite.com/subscription-notify">
     `;
 
-    document.body.appendChild(form);
-    form.submit();
-}   form.submit(); // Securely submit the form to Payfast
-
+    try {
+        document.body.appendChild(form);
+        document.body.style.cursor = "wait";
+        form.submit();
+    } catch (error) {
+        alert("An error occurred while processing your subscription. Please try again.");
+        console.error(error);
+    }
+}
