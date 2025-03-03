@@ -1424,12 +1424,15 @@ footer p,
 
 /* General Section Styles */
 #about-us {
-    padding: 15px 20px; /* Reduced padding for a shorter section */
-    background-color: #f4f7f6; /* Light background for modern feel */
+    padding: 15px 20px;
+    /* Reduced padding for a shorter section */
+    background-color: #f4f7f6;
+    /* Light background for modern feel */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     text-align: center;
-    margin-left: -25px; /* Push the entire section content slightly to the left */
+    margin-left: -25px;
+    /* Push the entire section content slightly to the left */
 }
 
 /* Section Heading Styles */
@@ -1437,27 +1440,42 @@ footer p,
     font-size: 28px;
     color: #555;
     font-weight: bold;
-    margin-bottom: 15px; /* Reduced margin */
+    margin-bottom: 15px;
+    /* Reduced margin */
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding-left: 300px; /* Added left padding to push it slightly left */
-    text-align: left; /* Align text to the left */
+    padding-left: 300px;
+    /* Added left padding to push it slightly left */
+    text-align: left;
+    /* Align text to the left */
 }
 
 /* Purpose Heading Styles */
 .purpose-heading {
-    padding: 0; /* Remove any inner padding */
-    box-shadow: none; /* Remove any shadow */
-    background: none; /* Remove any background */
-    border: none; /* Remove border */
-    width: auto; /* Allow natural width */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font family */
-    font-weight: 600; /* Bold weight for better emphasis */
-    font-size: 2rem; /* Larger font size for a stronger heading */
-    color: #333; /* Dark color for readability */
-    letter-spacing: 1px; /* Slight letter spacing for a modern feel */
-    text-align: center; /* Center-align the heading */
-    margin: 0; /* Remove default margins */
+    padding: 0;
+    /* Remove any inner padding */
+    box-shadow: none;
+    /* Remove any shadow */
+    background: none;
+    /* Remove any background */
+    border: none;
+    /* Remove border */
+    width: auto;
+    /* Allow natural width */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Modern font family */
+    font-weight: 600;
+    /* Bold weight for better emphasis */
+    font-size: 2rem;
+    /* Larger font size for a stronger heading */
+    color: #333;
+    /* Dark color for readability */
+    letter-spacing: 1px;
+    /* Slight letter spacing for a modern feel */
+    text-align: center;
+    /* Center-align the heading */
+    margin: 0;
+    /* Remove default margins */
 }
 
 
@@ -1469,204 +1487,272 @@ footer p,
     align-items: flex-start;
     gap: 30px;
     flex-wrap: wrap;
-    margin-top: 10px; /* Reduced margin-top */
+    margin-top: 10px;
+    /* Reduced margin-top */
 }
 
 /* Section 1 Background Color */
 #about-us-1 {
-    background-color: #f9f9f9; /* Green background for "About Us" section */
+    background-color: #f9f9f9;
+    /* Green background for "About Us" section */
 }
 
 /* Section 2 Background Color */
 #about-us-2 {
-    background-color: #d8edf0; /* Orange background for "Every Cent Makes A Plate" */
+    background-color: #d8edf0;
+    /* Orange background for "Every Cent Makes A Plate" */
 }
 
 /* Section 3 Background Color */
 #about-us-3 {
-    background-color: #f9f9f9; /* Blue background for "If it doesn't say Food for Life South Africa" */
+    background-color: #f9f9f9;
+    /* Blue background for "If it doesn't say Food for Life South Africa" */
 }
 
 /* Section 4 Background Color */
 #about-us-4 {
-    background-color: #d8edf0; /* Purple background for "Our Core Values" */
+    background-color: #d8edf0;
+    /* Purple background for "Our Core Values" */
 }
 
 /* Image Styling */
 .about-us-image {
     width: 100%;
-    max-width: 340px; /* Reduced width for a more compact image */
+    max-width: 340px;
+    /* Reduced width for a more compact image */
     height: auto;
-    border-radius: 10px; /* Border radius for the image */
+    border-radius: 10px;
+    /* Border radius for the image */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    border: 10px solid #d8edf0; /* Light grey border for the frame */
+    border: 10px solid #d8edf0;
+    /* Light grey border for the frame */
 }
 
 .about-us-image:hover {
-    transform: scale(1.05); /* Subtle zoom effect on hover */
+    transform: scale(1.05);
+    /* Subtle zoom effect on hover */
 }
 
 /* Text Styling */
 .about-us-text {
-    max-width: 600px; /* Reduced max width */
-    font-size: 1.1em; /* Reduced font size for text */
-    line-height: 1.6; /* Reduced line height */
+    max-width: 600px;
+    /* Reduced max width */
+    font-size: 1.1em;
+    /* Reduced font size for text */
+    line-height: 1.6;
+    /* Reduced line height */
     color: #666;
     text-align: left;
-    margin-top: 15px; /* Reduced margin */
+    margin-top: 15px;
+    /* Reduced margin */
     font-weight: 300;
 }
 
 .about-us-text p {
-    margin-bottom: 12px; /* Reduced bottom margin */
-    padding-right: 15px; /* Adds space on the right for readability */
+    margin-bottom: 12px;
+    /* Reduced bottom margin */
+    padding-right: 15px;
+    /* Adds space on the right for readability */
 }
 
 /* Default styles for <br> tag */
 br {
-    display: inline-block; /* Make it affect the layout */
+    display: inline-block;
+    /* Make it affect the layout */
 }
 
 /* Responsive Styling for Mobile */
 @media screen and (max-width: 768px) {
     #about-us-1 {
-        padding: 15px; /* Reduced padding for smaller screens */
-        margin-left: 0; /* Reset margin for mobile */
+        padding: 15px;
+        /* Reduced padding for smaller screens */
+        margin-left: 0;
+        /* Reset margin for mobile */
     }
 
     .section-heading {
-        font-size: 24px; /* Slightly smaller font size for mobile */
+        font-size: 24px;
+        /* Slightly smaller font size for mobile */
         margin-bottom: 15px;
-        text-align: center; /* Center align for mobile */
-        padding-left: 0; /* Remove left padding for mobile */
+        text-align: center;
+        /* Center align for mobile */
+        padding-left: 0;
+        /* Remove left padding for mobile */
     }
 
     .purpose-heading {
-        font-size: 28px; /* Smaller font size for mobile */
+        font-size: 28px;
+        /* Smaller font size for mobile */
         margin-bottom: 15px;
     }
 
     .about-us-content {
         flex-direction: column;
-        gap: 15px; /* Reduced gap for tighter spacing */
+        gap: 15px;
+        /* Reduced gap for tighter spacing */
         align-items: center;
     }
 
     .about-us-image {
         max-width: 100%;
         box-shadow: none;
-        margin-bottom: 15px; /* Added margin for better separation */
+        margin-bottom: 15px;
+        /* Added margin for better separation */
     }
 
     .about-us-text {
-        font-size: 1em; /* Smaller font size for better readability */
-        padding: 0 10px; /* Reduced padding for tighter spacing */
-        text-align: center; /* Center text for better mobile readability */
+        font-size: 1em;
+        /* Smaller font size for better readability */
+        padding: 0 10px;
+        /* Reduced padding for tighter spacing */
+        text-align: center;
+        /* Center text for better mobile readability */
     }
 
     .about-us-text p {
-        padding-right: 0; /* Remove padding for centered text */
+        padding-right: 0;
+        /* Remove padding for centered text */
     }
 }
 
 /* Additional Media Query for Very Small Screens */
 @media screen and (max-width: 480px) {
     .section-heading {
-        font-size: 22px; /* Even smaller font size for very small screens */
+        font-size: 22px;
+        /* Even smaller font size for very small screens */
     }
 
     .purpose-heading {
-        font-size: 24px; /* Smaller font size for very small screens */
+        font-size: 24px;
+        /* Smaller font size for very small screens */
     }
 
     .about-us-text {
-        font-size: 0.95em; /* Slightly smaller font size for very small screens */
+        font-size: 0.95em;
+        /* Slightly smaller font size for very small screens */
     }
 }
 
 .purpose-head {
-    padding: 0; /* Remove any inner padding */
-    box-shadow: none; /* Remove any shadow */
-    background: none; /* Remove any background */
-    border: none; /* Remove border */
-    width: auto; /* Allow natural width */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font family */
-    font-weight: 600; /* Bold weight for better emphasis */
-    font-size: 1.5rem; /* Smaller font size for a more balanced heading */
-    color: #333; /* Dark color for readability */
-    letter-spacing: 1px; /* Slight letter spacing for a modern feel */
-    text-align: center; /* Center-align the heading */
-    margin: 0; /* Remove default margins */
+    padding: 0;
+    /* Remove any inner padding */
+    box-shadow: none;
+    /* Remove any shadow */
+    background: none;
+    /* Remove any background */
+    border: none;
+    /* Remove border */
+    width: auto;
+    /* Allow natural width */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Modern font family */
+    font-weight: 600;
+    /* Bold weight for better emphasis */
+    font-size: 1.5rem;
+    /* Smaller font size for a more balanced heading */
+    color: #333;
+    /* Dark color for readability */
+    letter-spacing: 1px;
+    /* Slight letter spacing for a modern feel */
+    text-align: center;
+    /* Center-align the heading */
+    margin: 0;
+    /* Remove default margins */
 }
 
 /* Contact Section Styles */
 #contact {
-    text-align: center; /* Center-align the content */
-    margin: 20px auto; /* Center the section with auto margins */
+    text-align: center;
+    /* Center-align the content */
+    margin: 20px auto;
+    /* Center the section with auto margins */
     background-color: #ffffff;
 }
 
 #contact h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-    font-weight: 600; /* Bold for emphasis */
-    font-size: 2rem; /* Slightly larger font size */
-    color: #333; /* Dark color for readability */
-    margin-bottom: 20px; /* Space below the heading */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Modern font */
+    font-weight: 600;
+    /* Bold for emphasis */
+    font-size: 2rem;
+    /* Slightly larger font size */
+    color: #333;
+    /* Dark color for readability */
+    margin-bottom: 20px;
+    /* Space below the heading */
 }
 
 #contact p {
-    font-size: 1.1rem; /* Slightly larger text for the paragraph */
-    color: #555; /* Dark grey color for the paragraph */
-    margin-bottom: 20px; /* Space below the paragraph */
+    font-size: 1.1rem;
+    /* Slightly larger text for the paragraph */
+    color: #555;
+    /* Dark grey color for the paragraph */
+    margin-bottom: 20px;
+    /* Space below the paragraph */
 }
 
 #contact address {
-    font-style: normal; /* Remove italics for address */
-    font-size: 1rem; /* Standard font size for address text */
-    color: #333; /* Dark color for readability */
-    line-height: 1.5; /* Increase line height for readability */
+    font-style: normal;
+    /* Remove italics for address */
+    font-size: 1rem;
+    /* Standard font size for address text */
+    color: #333;
+    /* Dark color for readability */
+    line-height: 1.5;
+    /* Increase line height for readability */
 }
 
 #contact address span {
-    display: block; /* Display each contact info on a new line */
-    margin-bottom: 8px; /* Space between each line of contact info */
+    display: block;
+    /* Display each contact info on a new line */
+    margin-bottom: 8px;
+    /* Space between each line of contact info */
 }
 
 #contact address a {
-    color: #007BFF; /* Blue color for links */
-    text-decoration: none; /* Remove underline from links */
+    color: #007BFF;
+    /* Blue color for links */
+    text-decoration: none;
+    /* Remove underline from links */
 }
 
 #contact address a:hover {
-    text-decoration: underline; /* Underline links on hover for emphasis */
+    text-decoration: underline;
+    /* Underline links on hover for emphasis */
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
     #contact {
-        padding: 20px 10px; /* Less padding on mobile */
+        padding: 20px 10px;
+        /* Less padding on mobile */
     }
 
     #contact h2 {
-        font-size: 1.5rem; /* Smaller font size for headings */
+        font-size: 1.5rem;
+        /* Smaller font size for headings */
     }
 
     #contact p {
-        font-size: 1rem; /* Adjust paragraph text for smaller screens */
+        font-size: 1rem;
+        /* Adjust paragraph text for smaller screens */
     }
 
     #contact address {
-        font-size: 0.9rem; /* Slightly smaller address font */
+        font-size: 0.9rem;
+        /* Slightly smaller address font */
     }
 
     #contact address span {
-        margin-bottom: 10px; /* Increase spacing between contact info */
+        margin-bottom: 10px;
+        /* Increase spacing between contact info */
     }
 }
 
 .donate-section {
-    background: #f9f9f9; /* Light gray background */
+    background: #f9f9f9;
+    /* Light gray background */
     padding: 50px 20px;
     text-align: center;
 }
@@ -1683,7 +1769,8 @@ br {
 
 /* Header */
 .donate-header h1 {
-    color: #003366; /* Navy Blue */
+    color: #003366;
+    /* Navy Blue */
     font-size: 28px;
     margin-bottom: 10px;
 }
@@ -1716,14 +1803,16 @@ br {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    border-left: 6px solid #003366; /* Navy Blue left border */
+    border-left: 6px solid #003366;
+    /* Navy Blue left border */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     text-align: left;
 }
 
 .donate-option h2 {
     font-size: 20px;
-    color: #003366; /* Navy Blue */
+    color: #003366;
+    /* Navy Blue */
     margin-bottom: 10px;
 }
 
@@ -1744,8 +1833,10 @@ br {
 }
 
 /* Buttons */
-.donate-button, .subscribe-button {
-    background: #ff6f00; /* Orange */
+.donate-button,
+.subscribe-button {
+    background: #ff6f00;
+    /* Orange */
     color: #fff;
     font-size: 16px;
     padding: 12px 20px;
@@ -1756,8 +1847,10 @@ br {
     margin-top: 10px;
 }
 
-.donate-button:hover, .subscribe-button:hover {
-    background: #0055aa; /* Blue hover */
+.donate-button:hover,
+.subscribe-button:hover {
+    background: #0055aa;
+    /* Blue hover */
     transform: scale(1.05);
 }
 
@@ -1804,8 +1897,508 @@ br {
         font-size: 14px;
     }
 
-    .donate-button, .subscribe-button {
+    .donate-button,
+    .subscribe-button {
         padding: 12px;
         font-size: 15px;
     }
 }
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+.contact-image {
+    flex: 1;
+    max-width: 30%;
+    /* Reduced from 40% to 30% */
+    padding: 20px;
+}
+
+.contact-image img {
+    width: 80%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.contact-details {
+    flex: 2;
+    padding: 20px;
+}
+
+.contact-details h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.contact-details p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.contact-info p {
+    margin: 8px 0;
+}
+
+.contact-form {
+    margin-top: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.contact-form button {
+    background: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+/* Follow Us Section */
+.follow-us {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.follow-us h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #007bff;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
+
+.social-icons i {
+    font-size: 18px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .contact-image {
+        max-width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .contact-image img {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .contact-details {
+        padding: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+
+    .follow-us {
+        margin-top: 20px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+}
+
+.contact-details p,
+.contact-info p {
+    color: #555;
+    font-family: 'Inter', sans-serif;
+    /* Modern sans-serif font */
+    font-size: 16px;
+    /* Slightly larger font size */
+    line-height: 1.8;
+    /* Improved line height for readability */
+    letter-spacing: 0.5px;
+    /* Slight letter spacing for better legibility */
+    font-weight: 400;
+    /* Normal font weight */
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    /* Slightly smaller for contact info */
+    color: #666;
+    /* Slightly lighter color for subtlety */
+}
+
+.document-library {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.library-description {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.library-description h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.library-description p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.certificate-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-card img {
+    width: 100%; /* Ensures the image takes up the full width of the card */
+    height: 250px; /* Increased height for better visibility */
+    object-fit: contain; /* Ensures the entire image is visible without cropping */
+    border-radius: 10px 10px 0 0; /* Rounded corners at the top */
+    background-color: #f0f0f0; /* Fallback background color if the image doesn't load */
+}
+
+.certificate-info {
+    padding: 15px;
+    text-align:left;
+}
+
+.certificate-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.certificate-info p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.certificate-info a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.certificate-info a:hover {
+    background-color: #0056b3;
+}
+
+
+
+.mega-header {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.mega-title {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.mega-subtitle {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Sections */
+section {
+    padding: 1.5rem;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Donation Section */
+.donation-section {
+    text-align: center;
+}
+
+.donation-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.donation-card {
+    background: #e3f2fd;
+    padding: 1.2rem;
+    border-radius: 8px;
+    width: 180px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.donation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.donation-button {
+    background: #003366; /* Navy blue */
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.donation-button:hover {
+    background: #002244; /* Darker navy blue */
+}
+
+.donation-full {
+    width: 100%;
+}
+
+/* About Section */
+.about-section {
+    padding: 2rem;
+    margin: 1.5rem auto;
+    background: #ffffff;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.about-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.about-image {
+    width: 45%;
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-info {
+    width: 50%;
+    font-size: 1rem;
+    color: #555;
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.about-info p {
+    margin-bottom: 1.2rem;
+}
+
+.about-info p:first-of-type {
+    margin-top: 0;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact-link {
+    color: #003366; /* Navy blue */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #002244; /* Darker navy blue */
+    text-decoration: underline;
+}
+
+/* Materials Section */
+.materials-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.material-item {
+    background: #e3f2fd;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    margin: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.material-item:hover {
+    background: #c8e6c9; /* Light green */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mega-title {
+        font-size: 1.5rem;
+    }
+
+    .mega-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-info {
+        width: 100%;
+        text-align: left;
+    }
+
+    .about-title {
+        font-size: 1.8rem;
+    }
+
+    .material-item {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-info {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .about-title {
+        font-size: 1.5rem;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .material-item {
+        font-size: 0.9rem;
+    }
+
+    .donation-card {
+        width: 100%;
+    }
+}
+
