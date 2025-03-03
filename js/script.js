@@ -356,12 +356,12 @@ function redirectToPayFast() {
 
     const form = document.createElement("form");
     form.method = "POST";
-    form.action = "https://www.payfast.co.za/eng/process";
+    form.action = "https://www.payfast.co.za/eng/process"; // Payfast production endpoint
 
-    // PayFast Required Fields
+    // Payfast Required Fields
     form.innerHTML = `
-        <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
-        <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
+        <input type="hidden" name="merchant_id" value="	10037375">
+        <input type="hidden" name="merchant_key" value="vvl2itlcfwjfi">
         <input type="hidden" name="amount" value="${donationAmount}">
         <input type="hidden" name="item_name" value="Food For Life Donation">
         <input type="hidden" name="return_url" value="YOUR_RETURN_URL">
@@ -370,5 +370,5 @@ function redirectToPayFast() {
     `;
 
     document.body.appendChild(form);
-    form.submit();  // Securely submit the form to PayFast
+    form.submit(); // Securely submit the form to Payfast
 }
