@@ -1760,10 +1760,15 @@ br {
     margin-top: 10px;
 }
 
-/* Mobile-Only Media Queries */
+/* Mobile-Only Styles */
 @media screen and (max-width: 768px) {
     .donate-section {
         padding: 15px;
+    }
+
+    /* Center all text on mobile */
+    .donate-option {
+        text-align: center;
     }
 
     .donate-header h1 {
@@ -1772,6 +1777,10 @@ br {
 
     .donate-header p {
         font-size: 14px;
+    }
+
+    .donate-options {
+        gap: 15px;
     }
 
     .donate-option {

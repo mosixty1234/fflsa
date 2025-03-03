@@ -347,26 +347,28 @@ scrollUpBtn.onclick = function () {
 };
 
 function redirectToPayFast() {
-    const donationAmount = prompt("Please enter the donation amount (ZAR):");
+    const donationAmount = document.getElementById("donationAmount").value.trim();
 
-    if (donationAmount && !isNaN(donationAmount) && donationAmount > 0) {
-      const form = document.createElement("form");
-      form.method = "POST";
-      form.action = "https://www.payfast.co.za/eng/process";
+    if (!donationAmount || isNaN(donationAmount) || donationAmount < 50) {
+        alert("Please enter a valid donation amount (minimum R50).");
+        return;
+    }
 
-      // PayFast Integration Fields
-      form.innerHTML = `
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = "https://www.payfast.co.za/eng/process";
+
+    // PayFast Required Fields
+    form.innerHTML = `
         <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
         <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
         <input type="hidden" name="amount" value="${donationAmount}">
+        <input type="hidden" name="item_name" value="Food For Life Donation">
         <input type="hidden" name="return_url" value="YOUR_RETURN_URL">
         <input type="hidden" name="cancel_url" value="YOUR_CANCEL_URL">
         <input type="hidden" name="notify_url" value="YOUR_NOTIFY_URL">
-      `;
+    `;
 
-      document.body.appendChild(form);
-      form.submit();  // Submit the form to PayFast
-    } else {
-      alert("Please enter a valid donation amount.");
-    }
-  }
+    document.body.appendChild(form);
+    form.submit();  // Securely submit the form to PayFast
+}
