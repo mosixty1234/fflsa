@@ -346,7 +346,9 @@ scrollUpBtn.onclick = function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
-function redirectToPayFast() {
+
+ // One-time donation function
+ function redirectToPayFast() {
     const donationAmount = document.getElementById("donationAmount").value.trim();
 
     if (!donationAmount || isNaN(donationAmount) || donationAmount < 50) {
@@ -356,19 +358,49 @@ function redirectToPayFast() {
 
     const form = document.createElement("form");
     form.method = "POST";
-    form.action = "https://www.payfast.co.za/eng/process"; // Payfast production endpoint
+    form.action = "https://www.payfast.co.za/eng/process"; // Use Sandbox for testing: "https://sandbox.payfast.co.za/eng/process"
 
-    // Payfast Required Fields
+    // PayFast Required Fields
     form.innerHTML = `
-        <input type="hidden" name="merchant_id" value="	10037375">
+        <input type="hidden" name="merchant_id" value="10037375">
         <input type="hidden" name="merchant_key" value="vvl2itlcfwjfi">
         <input type="hidden" name="amount" value="${donationAmount}">
         <input type="hidden" name="item_name" value="Food For Life Donation">
-        <input type="hidden" name="return_url" value="YOUR_RETURN_URL">
-        <input type="hidden" name="cancel_url" value="YOUR_CANCEL_URL">
-        <input type="hidden" name="notify_url" value="YOUR_NOTIFY_URL">
+        <input type="hidden" name="return_url" value="https://yourwebsite.com/payment-success">
+        <input type="hidden" name="cancel_url" value="https://yourwebsite.com/payment-cancelled">
+        <input type="hidden" name="notify_url" value="https://yourwebsite.com/payment-notify">
     `;
 
     document.body.appendChild(form);
-    form.submit(); // Securely submit the form to Payfast
+    form.submit(); // Submit to PayFast
 }
+
+// Subscription function
+function subscribeToPayFast(amount) {
+    if (!amount || isNaN(amount) || amount <= 0) {
+        alert("Invalid donation amount. Please try again.");
+        return;
+    }
+
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = "https://www.payfast.co.za/eng/process"; // Use Sandbox for testing: "https://sandbox.payfast.co.za/eng/process"
+
+    // PayFast Subscription Fields
+    form.innerHTML = `
+        <input type="hidden" name="merchant_id" value="10037375">
+        <input type="hidden" name="merchant_key" value="vvl2itlcfwjfi">
+        <input type="hidden" name="amount" value="${amount}">
+        <input type="hidden" name="item_name" value="Monthly Donation Subscription">
+        <input type="hidden" name="subscription_type" value="1"> <!-- 1 = Recurring -->
+        <input type="hidden" name="billing_frequency" value="1"> <!-- Monthly -->
+        <input type="hidden" name="cycles" value="0"> <!-- 0 = Infinite -->
+        <input type="hidden" name="return_url" value="https://yourwebsite.com/payment-success">
+        <input type="hidden" name="cancel_url" value="https://yourwebsite.com/payment-cancelled">
+        <input type="hidden" name="notify_url" value="https://yourwebsite.com/payment-notify">
+    `;
+
+    document.body.appendChild(form);
+    form.submit();
+}   form.submit(); // Securely submit the form to Payfast
+
