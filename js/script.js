@@ -518,3 +518,32 @@ function subscribeToPayFast(amount) {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".timeline-item");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+    const dateDisplay = document.querySelector(".date-display");
+
+    let currentIndex = 0;
+
+    function updateTimeline() {
+        items.forEach((item, index) => {
+            item.classList.toggle("active", index === currentIndex);
+        });
+
+        dateDisplay.textContent = items[currentIndex].dataset.date;
+    }
+
+    prevBtn.addEventListener("click", function () {
+        currentIndex = (currentIndex === 0) ? items.length - 1 : currentIndex - 1;
+        updateTimeline();
+    });
+
+    nextBtn.addEventListener("click", function () {
+        currentIndex = (currentIndex === items.length - 1) ? 0 : currentIndex + 1;
+        updateTimeline();
+    });
+
+    updateTimeline();
+});
+

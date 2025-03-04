@@ -2577,3 +2577,203 @@ br {
         width: 80%;
     }
 }
+
+/* Custom Styles for Sections */
+#branch-inform, #latest-news-1, #image-timeline-1, #get-involved-1 {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+#branch-inform h2, #latest-news-1 h2, #image-timeline-1 h2, #get-involved-1 h2 {
+    color: #0073e6;
+    border-bottom: 3px solid #0073e6;
+    padding-bottom: 8px;
+}
+
+#branch-inform h3, #latest-news-1 h3, #image-timeline-1 h3, #get-involved-1 h3 {
+    color: #444;
+    margin-top: 15px;
+}
+
+#branch-inform p, #latest-news-1 p, #image-timeline-1 p, #get-involved-1 p {
+    line-height: 1.6;
+}
+
+#branch-inform strong, #latest-news-1 strong, #image-timeline-1 strong, #get-involved-1 strong {
+    color: #222;
+}
+
+#branch-inform a, #latest-news-1 a, #image-timeline-1 a, #get-involved-1 a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#branch-inform a:hover, #latest-news-1 a:hover, #image-timeline-1 a:hover, #get-involved-1 a:hover {
+    text-decoration: underline;
+}
+
+#branch-inform ul, #latest-news-1 ul, #image-timeline-1 ul, #get-involved-1 ul {
+    list-style: none;
+    padding: 0;
+}
+
+#branch-inform ul li, #latest-news-1 ul li, #image-timeline-1 ul li, #get-involved-1 ul li {
+    background: #e6f2ff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+#image-timeline-1 {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-container {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+}
+
+.timeline-item {
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.timeline-item.active {
+    display: block;
+    opacity: 1;
+}
+
+.image-gallery-1 {
+    display: flex;
+    justify-content: flex-start;  /* Align items horizontally */
+    gap: 10px;
+    flex-wrap: nowrap;  /* Ensure the images stay in a single row */
+    overflow-x: auto;  /* Enable horizontal scrolling */
+    margin-top: 10px;
+}
+
+.image-gallery-1 img {
+    width: 100%;
+    max-width: 250px;
+    height: 250px;  /* Fixed height to maintain equal size */
+    object-fit: cover; /* Ensures images are properly cropped */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery-1 img:hover {
+    transform: scale(1.05);
+}
+
+.timeline-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.timeline-nav button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.timeline-nav button:hover {
+    background: #0056b3;
+}
+
+.date-display {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    #branch-inform, #latest-news-1, #image-timeline-1, #get-involved-1 {
+        padding: 18px;
+        max-width: 95%;
+    }
+
+    .image-gallery-1 {
+        flex-wrap: wrap;  /* Allow images to wrap to the next line */
+        justify-content: center; /* Center images */
+    }
+
+    .image-gallery-1 img {
+        max-width: 100%;
+        height: auto; /* Adjust height for better aspect ratio */
+    }
+
+    .timeline-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Mobile first approach (for smaller screens like tablets and phones) */
+@media (max-width: 768px) {
+    #branch-inform, #latest-news-1, #image-timeline-1, #get-involved-1 {
+        padding: 15px;
+    }
+
+    .image-gallery-1 {
+        flex-wrap: wrap;  /* Allow images to wrap on smaller screens */
+        justify-content: space-between; /* Add some space between images */
+    }
+
+    .image-gallery-1 img {
+        max-width: 100%;
+        height: auto; /* Make the images responsive */
+    }
+
+    .timeline-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-nav button {
+        width: 100%; /* Make buttons fill the available width on small screens */
+        margin-bottom: 10px;
+    }
+
+    .date-display {
+        font-size: 1em;
+    }
+}
+
+/* Very small screens like phones in portrait mode */
+@media (max-width: 480px) {
+    #branch-inform, #latest-news-1, #image-timeline-1, #get-involved-1 {
+        padding: 12px;
+    }
+
+    .timeline-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-nav button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .date-display {
+        font-size: 1em;
+    }
+}
