@@ -33,33 +33,23 @@ document.addEventListener("click", function (event) {
     }
 });
 
-// Toggle search bar visibility
-function toggleSearchBar() {
-    const searchBar = document.getElementById("search-bar");
-    if (searchBar) {
-        searchBar.classList.toggle("show");
-        const searchInput = document.getElementById("search-input");
-        // Focus the input if the search bar is shown
-        if (searchInput && searchBar.classList.contains("show")) {
-            searchInput.focus();
-        }
+document.addEventListener("DOMContentLoaded", function () {
+    // Function to toggle dropdown visibility
+    function toggleDropdown(dropdownId) {
+      const dropdown = document.getElementById(dropdownId);
+      if (dropdown) {
+        dropdown.classList.toggle("active");
+      }
     }
-}
-
-// Search function
-function search() {
-    const searchInput = document.getElementById("search-input");
-    const searchResult = document.getElementById("search-result");
-    
-    if (searchInput && searchResult) {
-        const query = searchInput.value;
-        if (query.trim()) {
-            searchResult.innerHTML = `Results for: <strong>${query}</strong>`;
-        } else {
-            searchResult.innerHTML = `Please enter a search query.`;
-        }
-    }
-}
+  
+    // Select all dropdown buttons and add click event listeners
+    document.querySelectorAll(".dropdown-toggle").forEach(button => {
+      button.addEventListener("click", function () {
+        const dropdownId = this.getAttribute("data-dropdown");
+        toggleDropdown(dropdownId);
+      });
+    });
+  });
 
 // Toggle side menu
 function toggleSideMenu() {
