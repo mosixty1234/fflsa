@@ -107,6 +107,41 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// Specific fix for MP dropdown
+document.addEventListener('DOMContentLoaded', function() {
+    const mpDropdownToggle = document.querySelector('[data-dropdown="mobile-mp-branches"]');
+    const mpDropdown = document.getElementById('mobile-mp-branches');
+
+    if (mpDropdownToggle && mpDropdown) {
+        mpDropdownToggle.addEventListener('click', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            // Toggle active class on dropdown
+            mpDropdown.classList.toggle('active');
+
+            // Rotate arrow
+            const arrow = this.querySelector('.arrow');
+            if (arrow) {
+                arrow.classList.toggle('rotate');
+            }
+
+            // Close other dropdowns if needed
+            const siblingDropdowns = document.querySelectorAll('.side-dropdown.active');
+            siblingDropdowns.forEach(dropdown => {
+                if (dropdown !== mpDropdown) {
+                    dropdown.classList.remove('active');
+                    const siblingArrow = dropdown.previousElementSibling?.querySelector('.arrow');
+                    if (siblingArrow) {
+                        siblingArrow.classList.remove('rotate');
+                    }
+                }
+            });
+        });
+    }
+});
+
+
 // Initialize slider
 document.addEventListener('DOMContentLoaded', function () {
     const sliderContainer = document.querySelector('.fl');
@@ -537,3 +572,20 @@ document.addEventListener("DOMContentLoaded", function () {
     updateTimeline();
 });
 
+
+//JavaScript to handle the "Next Latest News" button functionality
+let currentNewsIndex = 0;
+const newsItems = document.querySelectorAll('.news-item');
+const nextButton = document.querySelector('.next-news-btn');
+
+function showNextNews() {
+  // Hide the current news item
+  newsItems[currentNewsIndex].classList.remove('active');
+  // Move to the next news item
+  currentNewsIndex = (currentNewsIndex + 1) % newsItems.length;
+  // Show the next news item
+  newsItems[currentNewsIndex].classList.add('active');
+}
+
+// Add event listener to the button
+nextButton.addEventListener('click', showNextNews)

@@ -2777,3 +2777,94 @@ br {
         font-size: 1em;
     }
 }
+
+
+/* Latest News Section - Standalone Styles */
+#latest-news-1 {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  #latest-news-1 h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  #latest-news-1 h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  #latest-news-1 p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  #latest-news-1 .news-container {
+    margin-bottom: 20px;
+  }
+  
+  #latest-news-1 .news-item {
+    display: none; /* Hide all news items by default */
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #latest-news-1 .news-item.active {
+    display: block; /* Show only the active news item */
+  }
+  
+  #latest-news-1 .next-news-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 200px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #latest-news-1 .next-news-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Styles for Mobile */
+  @media (max-width: 768px) {
+    #latest-news-1 h2 {
+      font-size: 22px;
+    }
+  
+    #latest-news-1 h3 {
+      font-size: 18px;
+    }
+  
+    #latest-news-1 p {
+      font-size: 14px;
+    }
+  
+    #latest-news-1 .news-item {
+      padding: 10px;
+    }
+  
+    #latest-news-1 .next-news-btn {
+      font-size: 14px;
+      padding: 8px 16px;
+      max-width: 100%; /* Full width on mobile */
+    }
+  }
+
